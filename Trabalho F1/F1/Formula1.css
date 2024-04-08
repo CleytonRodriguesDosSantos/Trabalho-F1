@@ -1,0 +1,194 @@
+body{
+    background-color: rgb(21, 21, 31);
+}
+
+div{
+    display: inline-block;
+}
+.divFIA{
+    background-color:red;
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    color: white;
+    left: 0px;
+    position: absolute;
+ 
+}
+.tituloMenu{
+    top: 20px;
+    position: absolute;
+    left: 160px;
+    font-family: 'Vineta BT' ;
+    width: 100%;
+    height : 100%;
+    font-size: 40px;
+    color: white;
+}
+.logoF1{
+left: 700px;
+float: right;
+top:1000px ;
+}
+.tabelaP{
+    vertical-align: 100px;
+    border-color: red;
+    width: 450px;
+    background-color: white;
+
+}
+.tabelaRB{
+    border-color: red;
+    width: 400px;
+    background-color: white;
+    
+}
+.tabelaRS{
+    border-color: red;
+    width: 400px;
+    left: 100px;
+    position: static;
+    background-color: white;
+    size: 20%;
+}
+.tabelaRA{
+    border-color: red;
+    width: 400px;
+    background-color: white;
+}
+.tabelaEC{
+    border-color: red;
+    width: 550px;
+    background-color: white;
+}
+.tabelaSP{
+    border-color: red;
+    width: 190px;
+    background-color: white;
+    padding: 0%;
+    height: 270px;
+}
+.fonte{
+    font-family: 'BankGothic Lt BT';
+    color: red;
+}
+.fonteaba{
+    font-family: 'BankGothic Lt BT';
+    color: rgb(255, 255, 255);
+    background-color: red;
+}
+.cordaft{
+    color: red;
+}
+
+.fonteRBR{
+    font-family: 'BankGothic Lt BT';
+    color: darkblue ;;
+    
+
+}
+.fonteAM{
+    font-family: 'BankGothic Lt BT';
+    color: rgb(69, 88, 81);
+    
+ 
+}
+.fonteM{
+    font-family: 'BankGothic Lt BT';
+    
+
+}
+.fonteFR{
+    font-family: 'BankGothic Lt BT';
+    color: rgb(255, 0, 0);
+   
+
+}
+.fonteML{
+    font-family: 'BankGothic Lt BT';
+    color: rgb(214, 139, 0);
+   
+
+}
+.fonteAP{
+    font-family: 'BankGothic Lt BT';
+    color: rgb(255, 0, 255);
+    
+
+}
+.fonteHF{
+    font-family: 'BankGothic Lt BT';
+    color: blueviolet;
+   
+
+}
+.fonteAR{
+    font-family: 'BankGothic Lt BT';
+    color: green;
+
+
+}
+.fonteAT{
+    font-family: 'BankGothic Lt BT';
+    color: black;
+   
+
+}
+.fonteW{
+    font-family: 'BankGothic Lt BT';
+    color:blue;
+    
+    
+
+}
+.DIVRS{
+    left: 310px;
+    position: relative;
+   
+    
+}
+.DIVRB{
+    left: 227px;
+    position: relative;
+   
+}
+.DIVRA{
+    left: 400px;
+    position: relative;
+    
+}
+.DIVEC{
+    top: 400px;
+    position: relative;
+    right:570px;
+}
+.DIVSP{
+    left: 300;
+    position: relative;
+    bottom: 800px
+}
+.FT1{
+    top: 300px;
+    right: 95px;
+    bottom: 1000px;
+    position: relative;
+}
+.FT2{
+    top: 300px;
+    left: 100PX;
+    bottom: 1000px;
+    position: relative;
+}
+.FT3{
+    top: 300px;
+    left: 100PX;
+    bottom: 1000px;
+    position: relative;
+}
+.FT4{
+    top: 300px;
+    left: 100PX;
+    bottom: 1000px;
+    position: relative;
+}
+
