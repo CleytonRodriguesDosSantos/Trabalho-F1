@@ -1,0 +1,87 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercicio</title>
+</head>
+<body>
+    <h1>Exercicio 1 </h1>
+    <label for="valorPago">Valor Pago:</label>
+    <input type="number" id="valorPago"><br><br>
+    <label for="precoProduto">Preço do Produto:</label>
+    <input type="number" id="precoProduto"><br><br>
+    <button onclick="calcularTroco()">Calcular Troco</button><br><br>
+    <div id="resultado"></div>
+
+    <script>
+        function calcularTroco() {
+            var valorPago = parseFloat(document.getElementById('valorPago').value);
+            var precoProduto = parseFloat(document.getElementById('precoProduto').value);
+            
+            var troco = valorPago - precoProduto;
+            
+            if (troco >= 0) {
+                document.getElementById('resultado').innerText = 'Troco a ser dado: R$ ' + troco.toFixed(2);
+            } else {
+                document.getElementById('resultado').innerText = 'O valor pago é insuficiente.';
+            }
+        }
+    </script>
+<hr>
+<br><br><br>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Preço</title>
+    <script>
+        function calcularPreco() {
+            var valorKilo = parseFloat(document.getElementById('valorKilo').value);
+            var quantidadeKilos = parseFloat(document.getElementById('quantidadeKilos').value);
+
+            var precoTotal = valorKilo * quantidadeKilos;
+
+            document.getElementById('resultado').innerHTML = "O valor total a ser pago é R$" + precoTotal.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Exercicio 2</h2>
+    <label for="valorKilo">Valor por Quilo:</label>
+    <input type="number" id="valorKilo"><br><br>
+    <label for="quantidadeKilos">Quantidade de Kilos:</label>
+    <input type="number" id="quantidadeKilos"><br><br>
+    <button onclick="calcularPreco()">Calcular</button><br><br>
+    <p id="resultado"></p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste de Saldo</title>
+    <script>
+        function calcularReajuste() {
+            var saldo = parseFloat(document.getElementById('saldo').value);
+            var saldoReajustado = saldo * 1.01; // Reajuste de 1%
+
+            document.getElementById('resultado').innerHTML = "O saldo com reajuste de 1% é: R$" + saldoReajustado.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Reajuste de Saldo Exercicio 3 </h2>
+    <label for="saldo">Saldo:</label>
+    <input type="number" id="saldo"><br><br>
+    <button onclick="calcularReajuste()">Calcular</button><br><br>
+    <p id="resultado"></p>
+</body>
+</html>
+
