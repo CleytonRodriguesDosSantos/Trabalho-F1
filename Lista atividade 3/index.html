@@ -1,0 +1,268 @@
+<h3>Cleyton Rodrigues dos Santos</h3>
+<h3>RA: 60300538</h3>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Atividades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        label, input, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Atividades</h1>
+
+    <section>
+        <h2>1. Cálculo da Área do Terreno</h2>
+        <label for="terreno-largura">Largura (m):</label>
+        <input type="number" id="terreno-largura">
+        <label for="terreno-comprimento">Comprimento (m):</label>
+        <input type="number" id="terreno-comprimento">
+        <button onclick="calcularAreaTerreno()">Calcular Área</button>
+        <p id="resultado-terreno"></p>
+    </section>
+
+    <section>
+        <h2>2. Quantidade de Ferraduras</h2>
+        <label for="cavalos">Número de Cavalos:</label>
+        <input type="number" id="cavalos">
+        <button onclick="calcularFerraduras()">Calcular Ferraduras</button>
+        <p id="resultado-ferraduras"></p>
+    </section>
+
+    <section>
+        <h2>3. Arrecadação de Pães e Broas</h2>
+        <label for="paes">Quantidade de Pães:</label>
+        <input type="number" id="paes">
+        <label for="broas">Quantidade de Broas:</label>
+        <input type="number" id="broas">
+        <button onclick="calcularArrecadacao()">Calcular Arrecadação</button>
+        <p id="resultado-arrecadacao"></p>
+    </section>
+
+    <section>
+        <h2>4. Dias de Vida</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+        <label for="idade">Idade (anos):</label>
+        <input type="number" id="idade">
+        <button onclick="calcularDiasDeVida()">Calcular Dias de Vida</button>
+        <p id="resultado-vida"></p>
+    </section>
+
+    <section>
+        <h2>5. Litros de Gasolina</h2>
+        <label for="preco-gasolina">Preço do Litro de Gasolina (R$):</label>
+        <input type="number" id="preco-gasolina" step="0.01">
+        <label for="valor-gasolina">Valor do Pagamento (R$):</label>
+        <input type="number" id="valor-gasolina" step="0.01">
+        <button onclick="calcularLitrosGasolina()">Calcular Litros</button>
+        <p id="resultado-gasolina"></p>
+    </section>
+
+    <section>
+        <h2>6. Valor da Refeição</h2>
+        <label for="peso-refeicao">Peso da Refeição (kg):</label>
+        <input type="number" id="peso-refeicao" step="0.01">
+        <button onclick="calcularValorRefeicao()">Calcular Valor</button>
+        <p id="resultado-refeicao"></p>
+    </section>
+
+    <section>
+        <h2>7. Dias Passados no Ano</h2>
+        <label for="dia">Dia:</label>
+        <input type="number" id="dia">
+        <label for="mes">Mês:</label>
+        <input type="number" id="mes">
+        <button onclick="calcularDiasPassados()">Calcular Dias Passados</button>
+        <p id="resultado-dias-passados"></p>
+    </section>
+
+    <section>
+        <h2>8. Valor da Venda de Camisetas</h2>
+        <label for="camisetas-pequenas">Quantidade de Camisetas Pequenas:</label>
+        <input type="number" id="camisetas-pequenas">
+        <label for="camisetas-medias">Quantidade de Camisetas Médias:</label>
+        <input type="number" id="camisetas-medias">
+        <label for="camisetas-grandes">Quantidade de Camisetas Grandes:</label>
+        <input type="number" id="camisetas-grandes">
+        <button onclick="calcularValorCamisetas()">Calcular Valor</button>
+        <p id="resultado-camisetas"></p>
+    </section>
+
+    <section>
+        <h2>9. Distância entre Dois Pontos</h2>
+        <label for="ponto1x">Ponto 1 - X:</label>
+        <input type="number" id="ponto1x">
+        <label for="ponto1y">Ponto 1 - Y:</label>
+        <input type="number" id="ponto1y">
+        <label for="ponto2x">Ponto 2 - X:</label>
+        <input type="number" id="ponto2x">
+        <label for="ponto2y">Ponto 2 - Y:</label>
+        <input type="number" id="ponto2y">
+        <button onclick="calcularDistancia()">Calcular Distância</button>
+        <p id="resultado-distancia"></p>
+    </section>
+
+    <section>
+        <h2>10. Tempo Sem Acidentes</h2>
+        <label for="dias-sem-acidentes">Quantidade de Dias:</label>
+        <input type="number" id="dias-sem-acidentes">
+        <button onclick="calcularTempoAcidentes()">Calcular Tempo</button>
+        <p id="resultado-acidentes"></p>
+    </section>
+
+    <section>
+        <h2>11. Aumento Salarial</h2>
+        <label for="salario">Salário (R$):</label>
+        <input type="number" id="salario" step="0.01">
+        <button onclick="calcularAumentoSalarial()">Calcular Aumento</button>
+        <p id="resultado-salario"></p>
+    </section>
+
+    <section>
+        <h2>12. Dígitos do Número</h2>
+        <label for="numero">Número (até 3 dígitos):</label>
+        <input type="number" id="numero" max="999">
+        <button onclick="calcularDigitos()">Calcular Dígitos</button>
+        <p id="resultado-digitos"></p>
+    </section>
+
+    <section>
+        <h2>13. Área da Pizza</h2>
+        <label for="raio-pizza">Raio da Pizza (cm):</label>
+        <input type="number" id="raio-pizza" step="0.01">
+        <button onclick="calcularAreaPizza()">Calcular Área</button>
+        <p id="resultado-pizza"></p>
+    </section>
+
+    <section>
+        <h2>14. Divisão da Conta do Bar</h2>
+        <label for="valor-conta">Valor Total da Conta (R$):</label>
+        <input type="number" id="valor-conta" step="0.01">
+        <button onclick="calcularDivisaoConta()">Calcular Divisão</button>
+        <p id="resultado-conta"></p>
+    </section>
+
+    <script>
+        function calcularAreaTerreno() {
+            const largura = parseFloat(document.getElementById('terreno-largura').value);
+            const comprimento = parseFloat(document.getElementById('terreno-comprimento').value);
+            const area = largura * comprimento;
+            document.getElementById('resultado-terreno').innerText = `Área do terreno: ${area} m²`;
+        }
+
+        function calcularFerraduras() {
+            const cavalos = parseInt(document.getElementById('cavalos').value);
+            const ferraduras = cavalos * 4;
+            document.getElementById('resultado-ferraduras').innerText = `Ferraduras necessárias: ${ferraduras}`;
+        }
+
+        function calcularArrecadacao() {
+            const paes = parseInt(document.getElementById('paes').value);
+            const broas = parseInt(document.getElementById('broas').value);
+            const total = (paes * 0.12) + (broas * 1.50);
+            const poupanca = total * 0.1;
+            document.getElementById('resultado-arrecadacao').innerText = `Total arrecadado: R$${total.toFixed(2)}, Poupança: R$${poupanca.toFixed(2)}`;
+        }
+
+        function calcularDiasDeVida() {
+            const nome =
+
+ document.getElementById('nome').value;
+            const idade = parseInt(document.getElementById('idade').value);
+            const diasDeVida = idade * 365;
+            document.getElementById('resultado-vida').innerText = `${nome}, VOCÊ JÁ VIVEU ${diasDeVida} DIAS`;
+        }
+
+        function calcularLitrosGasolina() {
+            const preco = parseFloat(document.getElementById('preco-gasolina').value);
+            const valor = parseFloat(document.getElementById('valor-gasolina').value);
+            const litros = valor / preco;
+            document.getElementById('resultado-gasolina').innerText = `Litros de gasolina: ${litros.toFixed(2)} L`;
+        }
+
+        function calcularValorRefeicao() {
+            const peso = parseFloat(document.getElementById('peso-refeicao').value);
+            const valor = peso * 12.00;
+            document.getElementById('resultado-refeicao').innerText = `Valor a pagar: R$${valor.toFixed(2)}`;
+        }
+
+        function calcularDiasPassados() {
+            const dia = parseInt(document.getElementById('dia').value);
+            const mes = parseInt(document.getElementById('mes').value);
+            const diasPassados = ((mes - 1) * 30) + dia;
+            document.getElementById('resultado-dias-passados').innerText = `Dias passados desde o início do ano: ${diasPassados}`;
+        }
+
+        function calcularValorCamisetas() {
+            const pequenas = parseInt(document.getElementById('camisetas-pequenas').value);
+            const medias = parseInt(document.getElementById('camisetas-medias').value);
+            const grandes = parseInt(document.getElementById('camisetas-grandes').value);
+            const total = (pequenas * 10) + (medias * 12) + (grandes * 15);
+            document.getElementById('resultado-camisetas').innerText = `Valor arrecadado: R$${total.toFixed(2)}`;
+        }
+
+        function calcularDistancia() {
+            const x1 = parseFloat(document.getElementById('ponto1x').value);
+            const y1 = parseFloat(document.getElementById('ponto1y').value);
+            const x2 = parseFloat(document.getElementById('ponto2x').value);
+            const y2 = parseFloat(document.getElementById('ponto2y').value);
+            const distancia = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+            document.getElementById('resultado-distancia').innerText = `Distância entre os pontos: ${distancia.toFixed(2)}`;
+        }
+
+        function calcularTempoAcidentes() {
+            const dias = parseInt(document.getElementById('dias-sem-acidentes').value);
+            const anos = Math.floor(dias / 365);
+            const meses = Math.floor((dias % 365) / 30);
+            const diasRestantes = (dias % 365) % 30;
+            document.getElementById('resultado-acidentes').innerText = `Tempo sem acidentes: ${anos} anos, ${meses} meses e ${diasRestantes} dias`;
+        }
+
+        function calcularAumentoSalarial() {
+            const salario = parseFloat(document.getElementById('salario').value);
+            const aumento = salario * 0.15;
+            const salarioAumentado = salario + aumento;
+            const imposto = salarioAumentado * 0.08;
+            const salarioFinal = salarioAumentado - imposto;
+            document.getElementById('resultado-salario').innerText = `Salário inicial: R$${salario.toFixed(2)}, Salário com aumento: R$${salarioAumentado.toFixed(2)}, Salário final: R$${salarioFinal.toFixed(2)}`;
+        }
+
+        function calcularDigitos() {
+            const numero = parseInt(document.getElementById('numero').value);
+            const centena = Math.floor(numero / 100);
+            const dezena = Math.floor((numero % 100) / 10);
+            const unidade = numero % 10;
+            document.getElementById('resultado-digitos').innerText = `CENTENA = ${centena}, DEZENA = ${dezena}, UNIDADE = ${unidade}`;
+        }
+
+        function calcularAreaPizza() {
+            const raio = parseFloat(document.getElementById('raio-pizza').value);
+            const area = 3.14 * Math.pow(raio, 2);
+            document.getElementById('resultado-pizza').innerText = `Área da pizza: ${area.toFixed(2)} cm²`;
+        }
+
+        function calcularDivisaoConta() {
+            const valorConta = parseFloat(document.getElementById('valor-conta').value);
+            const valorCada = Math.floor(valorConta / 3);
+            const valorFelipe = valorConta - (2 * valorCada);
+            document.getElementById('resultado-conta').innerText = `Carlos: R$${valorCada.toFixed(2)}, André: R$${valorCada.toFixed(2)}, Felipe: R$${valorFelipe.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
